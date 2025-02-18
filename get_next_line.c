@@ -1,9 +1,9 @@
 #include "get_next_line.h"
 
-static char *read_buffer(int fd, char *buffer)
+static char	*read_buffer(int fd, char *buffer)
 {
-    char	*tmp;
-	int     bytes_read;
+	char	*tmp;
+	int		bytes_read;
 
 	tmp = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!tmp)
@@ -24,7 +24,7 @@ static char *read_buffer(int fd, char *buffer)
 	return (buffer);
 }
 
-static char *extract_line(char *buffer)
+static char	*extract_line(char *buffer)
 {
 	char	*line;
 	int		i;
