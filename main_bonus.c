@@ -15,7 +15,7 @@ int main(int argc, char **argv)
     if (argc < 2)
     {
         printf("Introduce texto (Ctrl+D para terminar):\n");// Leer de stdin si no hay argumentos
-        while ((line = get_next_line_bonus(STDIN_FILENO)))
+        while ((line = get_next_line(STDIN_FILENO)))
         {
             printf("[stdin] > %s", line);
             free(line);
@@ -51,7 +51,7 @@ int main(int argc, char **argv)
         for (i = 0; i < num_files; i++) {
             if (fds[i] == -1) continue;
             
-            line = get_next_line_bonus(fds[i]);
+            line = get_next_line(fds[i]);
             if (line) {
                 printf("[%s] > %s", argv[i + 1], line);
                 free(line);
