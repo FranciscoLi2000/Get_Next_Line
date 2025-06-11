@@ -84,7 +84,6 @@ char	*ft_save_stash(char *stash)
 		return (NULL);
 	while (stash[i])
 		new_stash[j++] = stash[i++];
-	new_stash[j++] = stash[i++];
 	new_stash[j] = '\0';
 	free(stash);
 	return (new_stash);

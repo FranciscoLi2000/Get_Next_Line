@@ -17,10 +17,12 @@
 #  define BUFFER_SIZE 42
 # endif
 
-# include "libft.h"
 # include <stdlib.h>
 # include <unistd.h>
 
+int		ft_strlen(char *str);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_get_line(char *stash);
 char	*ft_save_stash(char *stash);
 char	*ft_read_fd(int fd, char *stash);
